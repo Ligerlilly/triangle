@@ -26,4 +26,18 @@ describe "Triangle" do
     end
 
   end
+
+  describe "Triangle#isIsosceles?" do
+    it 'returns true if exactly 2 sides are equal' do
+      expect(Triangle.new(3, 3, 4).isIsosceles?).to eq(true)
+    end
+
+    it 'returns false if more than 2 sides are equal' do
+      expect(Triangle.new(3, 3, 3).isIsosceles?).to eq(false)
+    end
+
+    it 'returns false if no sides are equal' do
+      expect(Triangle.new(1, 3, 2).isIsosceles?).to eq(false)
+    end
+  end
 end
