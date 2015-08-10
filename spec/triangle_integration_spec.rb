@@ -3,8 +3,8 @@ require './app'
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe Triangle do
-  it 'takes user input sides and results page shows type of triangle', { type: :feature } do
+describe 'triangle path', { type: :feature }  do
+  it 'takes user input sides and results page shows type of triangle' do
     visit '/'
     fill_in 'side_a', with: 3
     fill_in 'side_b', with: 3
