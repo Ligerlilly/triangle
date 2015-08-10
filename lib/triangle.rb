@@ -26,4 +26,8 @@ class Triangle
     sides2 && !(isEquilateral?)
   end
 
+  define_method(:isScalene?) do
+    !(isIsosceles?) && !(isEquilateral?)
+  end
+
 end
