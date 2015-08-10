@@ -13,8 +13,11 @@ class Triangle
     sides_c_a = (@side_c + @side_a) >= @side_b
 
     sides && sides_a_b && sides_b_c && sides_c_a
-       
+
   end
 
+  define_method(:isEquilateral?) do
+    @side_a == @side_b && @side_b == @side_c
+  end
 
 end

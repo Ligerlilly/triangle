@@ -16,14 +16,14 @@ describe "Triangle" do
     end
   end
 
-  describe "Triangle#isEqualateral?" do
+  describe "Triangle#isEquilateral?" do
     it 'returns true if all the sides are equal' do
-      expect(Triangle.new(3, 3, 3).isEqualateral?).to eq(true)
+      expect(Triangle.new(3, 3, 3).isEquilateral?).to eq(true)
     end
 
     it 'returns false if all the sides are not equal' do
-      expect(Triangle.new(4, 4, 5).isEqualateral?).to eq(false)
+      expect(Triangle.new(4, 4, 5).isEquilateral?).to eq(false)
     end
 
-
+  end
 end
