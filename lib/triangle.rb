@@ -20,4 +20,10 @@ class Triangle
     @side_a == @side_b && @side_b == @side_c
   end
 
+  define_method(:isIsosceles?) do
+
+    sides2 = (@side_a == @side_b || @side_a == @side_c || @side_c == @side_b)
+    sides2 && !(isEquilateral?)
+  end
+
 end
