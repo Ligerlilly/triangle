@@ -40,4 +40,14 @@ describe "Triangle" do
       expect(Triangle.new(1, 3, 2).isIsosceles?).to eq(false)
     end
   end
+
+  describe 'Triangle#isScalene?' do
+    it 'returns true if no sides are equal' do
+      expect(Triangle.new(2, 3, 4).isScalene?).to eq true
+    end
+
+    it 'returns false if any sides are equal' do
+      expect(Triangle.new(7, 7, 11).isScalene?).to eq false
+    end
+  end
 end
